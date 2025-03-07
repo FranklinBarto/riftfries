@@ -1,0 +1,193 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/***********LOADING SCREEN****************/
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 250;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffff), to(#f5f1cf));
+  background: linear-gradient(180deg, #ffff, #f5f1cf);
+  background-size: cover;
+  font-family: "Cabin Condensed", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+  opacity: 1;
+}
+
+.loading-screen.hide {
+  opacity: 0 !important;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.loading-screen svg {
+  font-weight: bold;
+  max-width: 50vw;
+  height: 100%;
+}
+
+#wavePath {
+  -webkit-animation: loading 1.5s infinite;
+          animation: loading 1.5s infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(40%, 0);
+            transform: translate(40%, 0);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(40%, 0);
+            transform: translate(40%, 0);
+  }
+}
+
+/***********EOF LOADING SCREEN**************/
+section.fullpage {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: rebeccapurple;
+}
+
+section.fullpage .page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: 2s;
+  transition: 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.fullpage .page span {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  margin: 20vh auto 0 auto;
+  text-align: center;
+}
+
+section.fullpage .page.slide-left {
+  -webkit-transform: translate(-150%);
+          transform: translate(-150%);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+section.fullpage .page.slide-right {
+  -webkit-transform: translate(150%);
+          transform: translate(150%);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+section.fullpage .page .nav-items {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.fullpage .page .nav-items button {
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  background: none;
+  border: none;
+  margin: auto;
+}
+
+section.fullpage .page.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.fullpage .page.banner img {
+  height: 50%;
+  margin: 10vh auto 50px auto;
+}
+
+section.fullpage .page.banner a {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px auto;
+  color: #000;
+  text-decoration: none;
+}
+
+section.fullpage .page.banner h1 {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px auto;
+}
+
+section.fullpage .page.banner h3 {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  margin: 10px auto;
+}
+
+section.fullpage .page.banner button {
+  font-size: 3.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  background: none;
+  border: none;
+  margin: 30px auto;
+}
+/*# sourceMappingURL=careers.css.map */
