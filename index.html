@@ -38,7 +38,7 @@
 
     <meta name="msapplication-TileColor" content="#603cba">
 
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#fbf7ec">
 
     <meta name="description" content="Rift Fries is an african cuisine restaurant right in the heart of Nakuru. We guarantee our customers quality meals at great prices. We also do deliveries and offer outside catering prices.">
 
@@ -48,370 +48,252 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rift Fries Restaurant | Dine in, take away and Delivery</title>
+    <title>Rift Fries Restaurant | Fresh Food & Great Company in Nakuru</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css">
 
 </head>
 
-<body>
-        <div class="loading-screen">
-        <svg viewbox="0 0 100 20">
+<body class="rf-home">
+    <a class="rf-skip" href="#main-content">Skip to content</a>
+
+    <!-- Existing loading animation and JavaScript hooks are retained. -->
+    <div class="loading-screen" aria-hidden="true">
+        <svg viewBox="0 0 100 20">
             <defs>
-              <linearGradient id="gradient">
-                <stop color="#000"/>
-              </linearGradient>
-              <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
-                <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
-                </path>
-              </pattern>
+                <linearGradient id="gradient"><stop color="#000" /></linearGradient>
+                <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                    <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"></path>
+                </pattern>
             </defs>
             <text text-anchor="middle" x="50" y="15" font-size="17" fill="white" fill-opacity="0.1">Rift Fries</text>
-            <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="1">Rift Fries</text>
-          </svg>
+            <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)">Rift Fries</text>
+        </svg>
     </div>
 
-
-    <nav class="modal-delivery" id="modal">
-
-        <button id="modal_close"><img src="/assets/img/close-icon-yellow.svg" alt="icon close"></button>
-
-        <h2>Delivery and take out</h2>
-
-        <p>call us on <a href="tel:+254722886664">+254 722 886 664</a> to place your order, also call and have your meal
-
-            prepped for pick up and given to you in your car. We are open for take out. We only do deliveries withing Nakuru CBD</p>
-
-        <h2>Reservations and catering</h2>
-
-        <p>If you are in need of outside catering services, call us on <a href="tel:+254722886664">+254 722 886 664</a> and let us know what you need.</p>
-
-    </nav>
-
-    <nav class="header" id="header">
-
-        <div class="left"><img src="/assets/img/logos/rift_fries_stamp.png" alt="rift fries restaurant logo secondary "></div>
-
-        <div class="middle"></div>
-
-        <div class="right" id="burger">
-
-            <img class="nav_icon menu_active" src="/assets/img/burger-icon.svg" alt="burger icon">
-
-            <img class="nav_icon" src="/assets/img/close-icon.svg" alt="close icon">
-
+    <!-- Retained #modal, #modal_close and .modal_btn hooks for the existing main.js. -->
+    <nav class="modal-delivery" id="modal" aria-label="Ordering and reservation information">
+        <button id="modal_close" type="button" aria-label="Close ordering information">
+            <img src="/assets/img/close-icon-yellow.svg" alt="">
+        </button>
+        <div class="rf-modal-inner">
+            <p class="rf-overline">YOUR TABLE OR YOUR PLACE</p>
+            <h2>Order your favourites.</h2>
+            <p>For takeaway and delivery enquiries, call <a href="tel:+254722886664">+254 722 886 664</a>. Please confirm delivery coverage and any applicable fees when ordering.</p>
+            <h2>Gathering a crowd?</h2>
+            <p>For reservations and outside catering, give us a call and tell us what you have in mind.</p>
+            <a class="rf-modal-call" href="tel:+254722886664">Call Rift Fries <span aria-hidden="true">↗</span></a>
         </div>
-
     </nav>
 
-    <nav class="menu" id="navMenu">
+    <nav class="header" id="header" aria-label="Main navigation">
+        <a class="left" href="/" aria-label="Rift Fries home">
+            <img src="/assets/img/logos/rift_fries_stamp.png" alt="Rift Fries logo">
+        </a>
+        <div class="middle">
+            <a class="rf-header-wordmark" href="/">RIFT <span>FRIES</span><small>RESTAURANT</small></a>
+            <div class="rf-header-links">
+                <a href="#our-story">Our story</a>
+                <a href="/menu">Food menu</a>
+                <a href="#services">What we do</a>
+                <a href="#map">Find us</a>
+            </div>
+            <button class="rf-header-order modal_btn" type="button">Order now <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="right" id="burger" role="button" tabindex="0" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
+            <img class="nav_icon menu_active" src="/assets/img/burger-icon.svg" alt="">
+            <img class="nav_icon" src="/assets/img/close-icon.svg" alt="">
+        </div>
+    </nav>
 
-        <a href="about">About</a>
-
-        <a href="menu">Menu</a>
-
-        <p class="modal_btn">Delivery</p>
-
+    <nav class="menu" id="navMenu" aria-label="Expanded navigation">
+        <a href="/about">About</a>
+        <a href="/menu">Menu</a>
+        <p class="modal_btn" role="button" tabindex="0">Delivery &amp; orders</p>
         <a class="scrolling" href="#map">Locate us</a>
-
         <a href="tel:+254722886664" class="bottom-left">+254 722 886 664</a>
-
-        <a href="mail:hello@riftfries.co.ke" class="bottom-right">hello@riftfries.co.ke</a>
-
+        <a href="mailto:hello@riftfries.co.ke" class="bottom-right">hello@riftfries.co.ke</a>
     </nav>
 
-    <section class="body banner">
-
-        <div class="left">
-
-            <h1 class="scroll" data-rateY="0.5" data-rateX="0">
-
-                Rift Fries <br> Restaurant</h1>
-
-            <h3 class="scroll" data-rateY="0.5" data-rateX="0">
-
-                Fresh food always!</h3>
-
-        </div>
-
-        <div class="right">
-
-            <div class="image-top">
-
-                <div data-rateY="0.3" data-rateX="0" class="social scroll">
-
-                    <a target="_blank" href="https://www.instagram.com/riftfries/">INSTAGRAM</a>
-
-                    <a target="_blank" href="https://web.facebook.com/Rift-Fries-Restaurant-341779395971350">FACEBOOK</a>
-
-                    <a target="_blank" href="https://www.linkedin.com/company/rift-fries-restaurant">LINKEDIN</a>
-
+    <main id="main-content">
+        <!-- HERO: more compact, clearer messaging, the food as the focal point. -->
+        <section class="body banner rf-hero" aria-labelledby="hero-title">
+            <div class="rf-hero-decor" aria-hidden="true">✳</div>
+            <div class="rf-wrap rf-hero-grid">
+                <div class="rf-hero-copy">
+                    <div class="rf-eyebrow"><span class="rf-line"></span> NAKURU'S HOME FOR GOOD FOOD</div>
+                    <h1 id="hero-title">Fresh food.<br><em>Full hearts.</em></h1>
+                    <p class="rf-hero-description">From your first bite to your last laugh, there's always something good cooking at Rift Fries. Come for the flavour. Stay for the feeling.</p>
+                    <div class="rf-hero-actions">
+                        <a class="rf-btn rf-btn-primary" href="/menu">Explore the menu <span aria-hidden="true">↗</span></a>
+                        <button class="rf-btn rf-btn-secondary modal_btn" type="button">Order &amp; delivery <span aria-hidden="true">↗</span></button>
+                    </div>
+                    <div class="rf-hero-note"><span class="rf-hero-note-icon" aria-hidden="true">✳</span><span>African-inspired favourites.<br><strong>Made fresh, served with heart.</strong></span></div>
                 </div>
-
-            </div>
-
-        </div>
-
-        <div class="menu-items">
-
-            <a class="fade" href="./menu">Menu</a>
-
-            <p class="modal_btn fade">Delivery</p>
-
-            <p class="modal_btn fade">Reservations</p>
-
-            <a class="fade" href="#map">Locate us</a>
-
-        </div>
-
-    </section>
-
-
-
-    <section class="body part1">
-
-
-
-        <img class="fade" src="/assets/img/logos/rift_fries_logo.png" alt="rift fries restaurant logo primary">
-
-
-
-        <h3>African quisine at its best, we strive to offer quality dishes.</h3>
-
-
-
-        <div class="content">
-
-            <div class="left">
-
-                <h2 class="fade">Dining</h2>
-
-                <p class="fade">Ample seating space and a competent team ready to serve you. Our aim is to provide high quality food that is always fresh and meets our clients demands in terms of taste while still remaining pocket friendly.</p>
-
-                <a class="btn fade" href="./menu">View Menu</a>
-
-            </div>
-
-            <div class="right">
-
-                <img class="fade" src="/assets/img/fries_on_plate.jpg" alt="fish and fries plate">
-
-            </div>
-
-        </div>
-
-
-
-    </section>
-
-
-
-    <section class="body part2">
-
-        <div class="services">
-
-            <div class="img_back">
-
-                <div class="left">
-                    <h2 class="fade">Outside catering</h2>
+                <div class="rf-hero-art">
+                    <div class="rf-photo-arch">
+                        <img src="/assets/img/fries_on_plate.jpg" alt="Freshly prepared plate of fish and fries at Rift Fries" fetchpriority="high">
+                    </div>
+                    <div class="rf-food-badge" aria-label="Fresh food, always"><span>FRESH<br>FOOD</span><span class="rf-badge-star" aria-hidden="true">✳</span><small>ALWAYS</small></div>
+                    <div class="rf-floating-note"><span class="rf-floating-icon" aria-hidden="true">♥</span><span>Made to make<br><strong>your day.</strong></span></div>
+                    <div class="rf-hero-image-caption">GOOD FOOD &amp; GOOD COMPANY <span>— EST. NAKURU</span></div>
                 </div>
-
-                <div class="right">
-
-                    <p class="fade">Do you having a Parties, functions, funerals, big meeting coming up? We specialize in outside catering services and bring the dining experience to you</p>
-
-                    <a class="fade" href="">Book Us</a>
-
-                </div>
-
             </div>
-
-        </div>
-
-        <div class="services">
-
-            <div class="img_back">
-
-                <div class="left">
-                    <h2 class="fade">We do deliveries</h2>
-                </div>
-
-                <div class="right">
-
-                    <p class="fade">Riftfries does offer food delivery services! Our rider will be delivering orders as follows:
-
-                        Within Nakuru town CBD, all orders will be delivered at NO EXTRA COST.
-
-                        Orders within Nakuru town and its environs will be charged a delivery fee of 50ksh for orders above 400ksh.
-
-                        Dial 0722 886 664 to place your orders.</p>
-
-                    <a class="fade" href="tel:+254722886664">Place Order</a>
-
-                </div>
-
+            <div class="rf-hero-bottom rf-wrap">
+                <a href="#our-story">Discover Rift Fries <span aria-hidden="true">↓</span></a>
+                <div><span class="rf-dot"></span> Club Lane, Nakuru <span class="rf-divider">/</span> 8AM–6PM daily</div>
             </div>
+        </section>
 
+        <div class="body rf-highlights" aria-label="Ways to enjoy Rift Fries">
+            <a href="#our-story"><span>01</span> Dine in &amp; unwind <span class="rf-highlight-arrow" aria-hidden="true">↗</span></a>
+            <button class="modal_btn" type="button"><span>02</span> Takeaway &amp; delivery <span class="rf-highlight-arrow" aria-hidden="true">↗</span></button>
+            <a href="#services"><span>03</span> Catering for every occasion <span class="rf-highlight-arrow" aria-hidden="true">↗</span></a>
         </div>
 
-    </section>
-
-
-
-    <section class="body part3">
-
-        <h3 class="fade">What people <br>are saying</h3>
-
-        <img class="stamp" src="/assets/img/logos/rift_fries_stamp.png" alt="rift fries restaurant secondary logo">
-
-
-
-        <div class="carousel">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (1).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (2).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (3).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (4).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (5).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (6).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (7).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (8).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (9).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (10).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (11).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (12).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (13).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (14).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (15).png" alt="customer reviews">
-
-            <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (16).png" alt="customer reviews">
-
-        </div>
-
-    </section>
-
-
-
-
-
-    <section class="body part4">
-
-        <h4>A GREAT AFRICAN DINING EXPERIENCE</h4>
-
-
-
-        <img class="fade" src="/assets/img/chicken.jpg" alt="chicken">
-
-
-
-        <div class="partners">
-
-            <span>Trusted by</span>
-
-            <div class="icons">
-
-                <figure>
-
-                    <img class="fade" src="/assets/img/partners/absa-logo.png" alt="absa logo">
-
-                    <img class="fade" src="/assets/img/partners/barclays-logo.png" alt="barclays logo">
-
-                    <img class="fade" src="/assets/img/partners/equity-logo.png" alt="equity logo">
-
-                    <img class="fade" src="/assets/img/partners/gdc-logo.png" alt="gdc logo">
-
-                    <img class="fade" src="/assets/img/partners/kcb-logo.png" alt="kcb logo">
-
-                    <img class="fade" src="/assets/img/partners/telkom-logo.png" alt="telkom logo">
-
-                    <img class="fade" src="/assets/img/partners/posta-logo.png" alt="posta logo">
-
-                    <img class="fade" src="/assets/img/partners/teen-logo.png" alt="teens challenge logo">
-
-                </figure>
-
-            </div>
-
-        </div>
-
-
-
-        <div id="map" class="map">
-
-            <span class="text-top">BREAKFAST BRUNCH LUNCH DINNER CATERING BREAKFAST BRUNCH LUNCH DINNER CATERING</span>
-
-            <span class="text-bottom">BREAKFAST BRUNCH LUNCH DINNER CATERING BREAKFAST BRUNCH LUNCH DINNER CATERING</span>
-
-            <a href="https://g.page/rift-fries?share" target="_blank">Get Directions</a>
-
-        </div>
-
-
-        <div class="details">
-
-            <div class="top">
-
-                <div class="left">
-
-                    <h3 class="more_margin">GENERAL INFO</h3>
-
-                    <a href="mailto:info@riftfries.co.ke">info@riftfries.co.ke</a>
-
-                    <span>DELIVERY APPS</span>
-
-                    <span class="no_margin">MUNCHIZ</span>
-
-                    <span>GLOVO</span>
-
+        <section class="body part1 rf-story" id="our-story" aria-labelledby="story-title">
+            <div class="rf-wrap">
+                <div class="rf-section-kicker"><span>01 / THE RIFT FRIES EXPERIENCE</span><span>GOOD FOOD, GOOD PEOPLE</span></div>
+                <div class="rf-story-grid">
+                    <div class="rf-story-image">
+                        <img src="/assets/img/chicken.jpg" alt="A freshly prepared chicken dish from the Rift Fries kitchen" loading="lazy">
+                        <div class="rf-story-photo-tag">A table worth<br><em>coming back to.</em></div>
+                    </div>
+                    <div class="rf-story-copy">
+                        <p class="rf-overline">A WARM WELCOME, EVERY TIME</p>
+                        <h2 id="story-title">Pull up a chair.<br><em>You're home.</em></h2>
+                        <p>There's something special about a meal made with care. At Rift Fries, we bring together fresh ingredients, familiar African flavours and a friendly place to gather.</p>
+                        <p>Whether it's a quick lunch, a catch-up with friends or a family meal, we believe great food should feel good and be easy on your pocket.</p>
+                        <a class="rf-text-link" href="/menu">See what's cooking <span aria-hidden="true">↗</span></a>
+                        <img class="rf-story-stamp" src="/assets/img/logos/rift_fries_stamp.png" alt="" loading="lazy">
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="right">
-
-                    <h3 class="more_margin">OPEN HOURS</h3>
-
-                    <span>MONDAY-FRIDAY</span>
-
-                    <span class="no_margin">8AM-6PM</span>
-
-                    <span>WEEKENDS</span>
-
-                    <span class="no_margin">8AM-6PM</span>
-
-                    <span>HOLIDAYS</span>
-
-                    <span class="no_margin">8AM-6PM</span>
-
+        <section class="body part2 rf-services" id="services" aria-labelledby="services-title">
+            <div class="rf-wrap">
+                <div class="rf-section-kicker"><span>02 / A LITTLE SOMETHING FOR EVERYONE</span><span>MORE THAN A MEAL</span></div>
+                <div class="rf-services-heading">
+                    <h2 id="services-title">Your plans.<br><em>Our pleasure.</em></h2>
+                    <p>From a delicious meal out to something special at your event, we're here to make good moments even better.</p>
                 </div>
-
+                <div class="rf-service-grid">
+                    <article class="rf-service-card">
+                        <img src="/assets/img/outside_catering.jpg" alt="Rift Fries outside catering setup" loading="lazy">
+                        <div class="rf-service-content">
+                            <span class="rf-service-number">01 / EVENTS &amp; GATHERINGS</span>
+                            <h3>Bring us<br>to the party.</h3>
+                            <p>From celebrations to work functions, let our team take care of the food while you enjoy the occasion.</p>
+                            <a href="tel:+254722886664" aria-label="Call Rift Fries about outside catering">Ask about catering <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="rf-service-card">
+                        <img src="/assets/img/delivery_bike.jpg" alt="Rift Fries delivery motorcycle" loading="lazy">
+                        <div class="rf-service-content">
+                            <span class="rf-service-number">02 / TAKEAWAY &amp; DELIVERY</span>
+                            <h3>Cravings?<br>We've got you.</h3>
+                            <p>Prefer to eat at home or on the go? Call ahead for pickup or ask our team about local delivery.</p>
+                            <a href="tel:+254722886664" aria-label="Call Rift Fries to place an order">Place an order <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div class="bottom">
-
-                <h3>please do feel free to reach us on</h3>
-
-                <a href="mailto:hello@riftfries.co.ke">hello@riftfries.co.ke</a>
-
-                <a href="tel:+254722886664">+254 722 886 664</a>
-
+        <section class="body part3 rf-reviews" aria-labelledby="reviews-title">
+            <div class="rf-wrap rf-reviews-grid">
+                <div class="rf-reviews-copy">
+                    <p class="rf-overline">03 / KIND WORDS</p>
+                    <h2 id="reviews-title">The best part?<br><em>Our people.</em></h2>
+                    <p>Nothing makes us happier than seeing you enjoy your meal. Here's a little love from our guests.</p>
+                    <a class="rf-text-link" href="https://g.page/rift-fries?share" target="_blank" rel="noopener noreferrer">Visit us on Google <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="rf-review-frame">
+                    <span class="rf-quote-mark" aria-hidden="true">“</span>
+                    <!-- Keep original .carousel / .reviews selectors for carousel.js. -->
+                    <div class="carousel" aria-label="Guest review gallery">
+                        <img class="reviews active" src="/assets/img/reviews/rift_fries_google_review (1).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (2).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (3).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (4).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (5).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (6).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (7).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (8).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (9).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (10).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (11).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (12).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (13).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (14).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (15).png" alt="A guest review of Rift Fries" loading="lazy">
+                        <img class="reviews" src="/assets/img/reviews/rift_fries_google_review (16).png" alt="A guest review of Rift Fries" loading="lazy">
+                    </div>
+                    <span class="rf-review-caption">REAL PEOPLE. REAL GOOD FOOD.</span>
+                </div>
             </div>
+        </section>
 
+        <section class="body part4 rf-visit" aria-labelledby="visit-title">
+            <div class="rf-wrap">
+                <div class="rf-section-kicker"><span>04 / COME SAY HELLO</span><span>WE'RE SAVING YOU A SPOT</span></div>
+                <div class="rf-visit-heading">
+                    <div>
+                        <p class="rf-overline">SEE YOU SOON</p>
+                        <h2 id="visit-title">Hungry yet?<br><em>Come on in.</em></h2>
+                    </div>
+                    <a class="rf-btn rf-btn-primary" href="https://g.page/rift-fries?share" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="rf-location-grid" id="map">
+                    <a class="rf-location-map" href="https://g.page/rift-fries?share" target="_blank" rel="noopener noreferrer" aria-label="Open directions to Rift Fries Restaurant, Club Lane, Nakuru">
+                        <span>FIND US ON THE MAP <span aria-hidden="true">↗</span></span>
+                    </a>
+                    <div class="rf-location-info">
+                        <div class="rf-location-info-top">
+                            <span class="rf-overline">DROP BY ANYTIME</span>
+                            <h3>We're right<br>here in Nakuru.</h3>
+                            <p>Club Lane, Nakuru, Kenya</p>
+                        </div>
+                        <div class="rf-hours">
+                            <span class="rf-overline">OPENING HOURS</span>
+                            <div><span>Monday – Friday</span><strong>8AM – 6PM</strong></div>
+                            <div><span>Weekends</span><strong>8AM – 6PM</strong></div>
+                            <div><span>Holidays</span><strong>8AM – 6PM</strong></div>
+                        </div>
+                        <a class="rf-text-link" href="tel:+254722886664">Give us a call <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rf-trusted rf-wrap">
+                <p>Some of the teams we've had the pleasure of serving</p>
+                <div class="rf-trusted-logos">
+                    <img src="/assets/img/partners/absa-logo.png" alt="Absa" loading="lazy">
+                    <img src="/assets/img/partners/barclays-logo.png" alt="Barclays" loading="lazy">
+                    <img src="/assets/img/partners/equity-logo.png" alt="Equity" loading="lazy">
+                    <img src="/assets/img/partners/gdc-logo.png" alt="GDC" loading="lazy">
+                    <img src="/assets/img/partners/kcb-logo.png" alt="KCB" loading="lazy">
+                    <img src="/assets/img/partners/telkom-logo.png" alt="Telkom" loading="lazy">
+                    <img src="/assets/img/partners/posta-logo.png" alt="Posta" loading="lazy">
+                    <img src="/assets/img/partners/teen-logo.png" alt="Teen Challenge" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rf-site-footer">
+        <div class="rf-wrap rf-footer-top">
+            <div><p class="rf-overline">A LITTLE BIT OF GOOD IN EVERY BITE</p><h2>See you at<br><em>Rift Fries.</em></h2></div>
+            <div class="rf-footer-contact"><p>Good food tastes even better together.</p><a href="tel:+254722886664">+254 722 886 664 <span aria-hidden="true">↗</span></a><a href="mailto:hello@riftfries.co.ke">hello@riftfries.co.ke <span aria-hidden="true">↗</span></a></div>
         </div>
-
-    </section>
+        <div class="rf-wrap rf-footer-bottom">
+            <span>© <span id="rf-year">2026</span> Rift Fries Restaurant · Nakuru, Kenya</span>
+            <div class="rf-social-links"><a href="https://www.instagram.com/riftfries/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://web.facebook.com/Rift-Fries-Restaurant-341779395971350" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.linkedin.com/company/rift-fries-restaurant" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+        </div>
+    </footer>
 
     <script src="/assets/js/jquery.min.js"></script>
 
@@ -423,6 +305,33 @@
 
     <script src="/assets/js/carousel.js"></script>
 
+    <script>
+        // Small progressive enhancements that do not replace the site's existing main.js.
+        const rfYear = document.getElementById('rf-year');
+        if (rfYear) rfYear.textContent = new Date().getFullYear();
+        const rfBurger = document.getElementById('burger');
+        if (rfBurger) {
+            rfBurger.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    rfBurger.click();
+                }
+            });
+            rfBurger.addEventListener('click', () => {
+                requestAnimationFrame(() => {
+                    rfBurger.setAttribute('aria-expanded', String(document.getElementById('navMenu')?.classList.contains('menu_active')));
+                });
+            });
+        }
+        document.querySelectorAll('nav.menu [role="button"]').forEach((button) => {
+            button.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    button.click();
+                }
+            });
+        });
+    </script>
     <script type="application/ld+json">
         {
 
